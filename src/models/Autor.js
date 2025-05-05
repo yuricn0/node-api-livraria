@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const autorSchema = new mongoose.Schema(
     {
-        id: { type: mongoose.Schema.Types.ObjectId },
+        id: { type: String},
         nome: {
             type: String,
             required: [true, 'Nome do(a) autor(a) é obrigatório!'],
@@ -12,6 +12,6 @@ const autorSchema = new mongoose.Schema(
     { versionKey: false }
 );
 
-const autor = mongoose.model('autores', autorSchema);
+const autores = mongoose.model('autores', autorSchema);
 
-export { autor, autorSchema };
+export default autores;
